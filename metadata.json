@@ -1,0 +1,7 @@
+{
+  "name": "CheckMaster Auto",
+  "description": "Professional vehicle inspection and tracker installation checklist manager with AI-powered scanning.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
