@@ -25,7 +25,7 @@ export interface Field {
   label: string;
   required: boolean;
   options?: Option[];
-  price?: number; // For fields like manual price or simple checkbox price
+  price?: number; 
 }
 
 export interface Template {

@@ -22,10 +22,7 @@ export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & { 
   };
 
   return (
-    <button 
-      className={`px-6 py-3 rounded-full font-semibold transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-2 shadow-lg ${variants[variant]} ${className}`}
-      {...props}
-    >
+    <button className={`px-6 py-3 rounded-full font-semibold transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-2 shadow-lg ${variants[variant]} ${className}`} {...props}>
       {children}
     </button>
   );
@@ -34,10 +31,7 @@ export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & { 
 export const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement> & { label?: string }> = ({ label, className = "", ...props }) => (
   <div className="flex flex-col gap-2 w-full">
     {label && <label className="text-sm font-semibold text-slate-600 px-1">{label}</label>}
-    <input 
-      className={`bg-slate-100 border-none rounded-2xl px-5 py-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all ${className}`}
-      {...props}
-    />
+    <input className={`bg-slate-100 border-none rounded-2xl px-5 py-3 focus:ring-2 focus:ring-indigo-500 outline-none transition-all ${className}`} {...props} />
   </div>
 );
 
@@ -47,9 +41,5 @@ export const Badge: React.FC<{ children: React.ReactNode; variant?: 'indigo' | '
     emerald: 'bg-emerald-50 text-emerald-600',
     rose: 'bg-rose-50 text-rose-600'
   };
-  return (
-    <span className={`text-xs font-bold px-3 py-1 rounded-full ${colors[variant]}`}>
-      {children}
-    </span>
-  );
+  return <span className={`text-xs font-bold px-3 py-1 rounded-full ${colors[variant]}`}>{children}</span>;
 };
