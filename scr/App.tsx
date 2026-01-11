@@ -170,6 +170,7 @@ const App: React.FC = () => {
                         <span className="text-emerald-500 font-black text-sm">R$ {sub.totalValue}</span>
                       </div>
                       <p className="text-[10px] text-slate-400 mt-1 uppercase font-bold">{new Date(sub.date).toLocaleString()}</p>
+                      {/* Detailed data summary can be added here */}
                     </div>
                   </div>
                 ))}
@@ -188,6 +189,7 @@ const App: React.FC = () => {
         {renderView()}
       </main>
 
+      {/* Persistent Navigation Bar (Mobile) */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-xl border-t border-slate-100 px-6 py-4 flex justify-around items-center z-40 max-w-6xl mx-auto rounded-t-[2.5rem] shadow-2xl">
         <button 
           onClick={() => { setView('dashboard'); setActiveTemplate(null); }}
